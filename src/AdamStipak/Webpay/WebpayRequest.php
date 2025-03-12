@@ -5,7 +5,7 @@ namespace AdamStipak\Webpay;
 abstract class WebpayRequest
 {
 
-    private array $params = [];
+    protected array $params = [];
 
     /**
      * Set Digest for current request
