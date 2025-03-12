@@ -26,7 +26,7 @@ class PaymentRequestUrlTest extends TestCase {
 
     $api = $this->createApi();
 
-    $this->assertEquals($expectedUrl, $api->createPaymentRequestUrl($request));
+    $this->assertEquals($expectedUrl, $api->createWebpayRequestUrl($request));
   }
 
   public function testCreateUrlWitNotAddInfo () {
@@ -44,7 +44,7 @@ class PaymentRequestUrlTest extends TestCase {
 
     $api = $this->createApi();
 
-    $this->assertEquals($expectedUrl, $api->createPaymentRequestUrl($request));
+    $this->assertEquals($expectedUrl, $api->createWebpayRequestUrl($request));
   }
 
   /**
