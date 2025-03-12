@@ -1,14 +1,14 @@
 {
-  "name": "adamstipak/webpay-php",
-  "description": "GP Webpay API Wrapper",
+  "name": "homeportcz/webpay-php",
+  "description": "GP Webpay API Wrapper, forked from adamstipak/webpay-php, added support for Card Verification and Token request",
   "type": "library",
   "keywords": ["webpay", "php"],
   "license": "MIT",
   "homepage": "https://github.com/newPOPE/webpay-php",
   "authors": [
     {
-      "name": "Adam Štipák",
-      "homepage": "http://newpope.org"
+      "name": "Jiri Vosecek",
+      "homepage": "https://www.freebike.com"
     }
   ],
   "autoload": {
