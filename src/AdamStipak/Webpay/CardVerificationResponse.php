@@ -100,6 +100,10 @@ class CardVerificationResponse
         return $this->params['PANPATTERN'] ?? null;
     }
 
+    public function getExpiration() {
+        return $this->params['EXPIRY'] ?? null;
+    }
+
     /**
      * @return array
      */
