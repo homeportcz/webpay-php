@@ -92,12 +92,12 @@ class CardVerificationResponse
 
     public function getToken()
     {
-        return $this->params['TOKEN'];
+        return $this->params['TOKEN'] ?? null;
     }
 
     public function getPan()
     {
-        return $this->params['PANPATTERN'];
+        return $this->params['PANPATTERN'] ?? null;
     }
 
     /**
