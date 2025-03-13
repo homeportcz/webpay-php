@@ -80,4 +80,35 @@ class Api
             );
         }
     }
+
+    /**
+     * @param CardVerificationResponse  $response
+     * @throws Exception
+     * @throws PaymentResponseException
+     */
+    public function verifyCardVerificationResponse(CardVerificationResponse $response)
+    {
+        // verify digest & digest1
+        try {
+            $responseParams = $response->getParams();
+            $this->signer->verify($responseParams, $response->getDigest());
+
+            $responseParams['MERCHANTNUMBER'] = $this->merchantNumber;
+
+            $this->signer->verify($responseParams, $response->getDigest1());
+        } catch (SignerException $e) {
+            throw new Exception($e->getMessage(), $e->getCode(), $e);
+        }
+
+        // verify PRCODE and SRCODE
+        if (false !== $response->hasError()) {
+            $prcode = $response->getParams()['prcode'];
+            $srcode = $response->getParams()['srcode'];
+            throw new PaymentResponseException(
+                $prcode,
+                $srcode,
+                "Response has an error. {$prcode}:{$srcode}"
+            );
+        }
+    }
 }
