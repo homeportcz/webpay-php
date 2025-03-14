@@ -21,6 +21,7 @@ class CardVerificationRequest extends WebpayRequest  {
         $this->params['MERCHANTNUMBER'] = "";
         $this->params['OPERATION'] = 'CARD_VERIFICATION';
         $this->params['ORDERNUMBER'] = $orderNumber;
+        $this->params['USERPARAM1'] = 'T';
         $this->params['URL'] = $url;
 
         if ($md !== null) {
