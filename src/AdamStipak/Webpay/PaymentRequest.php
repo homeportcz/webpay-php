@@ -66,7 +66,7 @@ class PaymentRequest extends WebpayRequest
         }
 
         $this->params['URL'] = $url;
-        if($user_param_1) $this->params['URL'] = $user_param_1;
+        if($user_param_1) $this->params['USERPARAM1'] = $user_param_1;
         $this->params['PAYMETHOD'] = $paymentMethod;
 
         if ($md !== null) {
