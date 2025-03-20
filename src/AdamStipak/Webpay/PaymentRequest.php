@@ -51,7 +51,7 @@ class PaymentRequest extends WebpayRequest
         string  $md = null,
         AddInfo $addInfo = null,
         string  $token = null,
-        string  $paymentMethod = self::PAYMENT_CARD,
+        string  $paymentMethod = self::PAYMENT_CARD
     )
     {
         $this->params['MERCHANTNUMBER'] = "";
