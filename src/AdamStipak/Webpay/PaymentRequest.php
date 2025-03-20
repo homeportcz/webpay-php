@@ -50,7 +50,6 @@ class PaymentRequest extends WebpayRequest
         string  $merOrderNumber = null,
         string  $md = null,
         AddInfo $addInfo = null,
-        string  $token = null,
         string  $paymentMethod = self::PAYMENT_CARD
     )
     {
