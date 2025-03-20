@@ -80,7 +80,7 @@ class PaymentResponse
 
     public function getPan()
     {
-        return $this->params['user_param_1'] ?? null;
+        return $this->params['panpattern'] ?? null;
     }
 
     public function getExpiration() {
