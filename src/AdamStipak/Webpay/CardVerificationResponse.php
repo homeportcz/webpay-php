@@ -35,7 +35,7 @@ class CardVerificationResponse
     )
     {
         $this->params['operation'] = $operation;
-        $this->params['ordermumber'] = $ordernumber;
+        $this->params['ordernumber'] = $ordernumber;
         if ($merordernum !== null) {
             $this->params['merordernum'] = $merordernum;
         }

@@ -46,6 +46,7 @@ class PaymentRequest extends WebpayRequest
         int     $currency,
         int     $depositFlag,
         string  $url,
+        string  $user_param_1 = null,
         string  $merOrderNumber = null,
         string  $md = null,
         AddInfo $addInfo = null,
@@ -65,6 +66,7 @@ class PaymentRequest extends WebpayRequest
         }
 
         $this->params['URL'] = $url;
+        if($user_param_1) $this->params['URL'] = $user_param_1;
         $this->params['PAYMETHOD'] = $paymentMethod;
 
         if ($md !== null) {
